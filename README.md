@@ -1,9 +1,9 @@
-# tic-tac-toe
+# INSERT PROJECT TITLE
 
 Link: _Available later_  
-Playable Tic-Tac-Toe game in browser. Uses HTML, CSS, and JS.  
-Future Plans to make Player vs. AI mode.
+Include project description and use case. List tech stack and other technologies used.  
 
+Note: might have to remove package.json and package-lock.json and remake using steps below as they are specific to each repo.
 > **Use as future project template for ESLint & Prettier. Note: make a template repo excluding main.js, index.html, style.css. Run npm install within repo directory locally and you should be good to go.**
 
 ## Setting up prettier
