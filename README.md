@@ -1,18 +1,25 @@
 # INSERT PROJECT TITLE
 
 Link: _Available later_  
-Include project description and use case. List tech stack and other technologies used.  
+Include project description and use case. List tech stack and other technologies used.
 
-Note: might have to remove package.json and package-lock.json and remake using steps below as they are specific to each repo.
-> **Use as future project template for ESLint & Prettier. Note: make a template repo excluding main.js, index.html, style.css. Run npm install within repo directory locally and you should be good to go.**
+> **Use as future project template for ESLint/Prettier and Webpack.**
+
+## Additional Configuration
+
+1. `npm init` in root project repo to create a package.json file.
+2. `npm install webpack webpack-cli --save-dev` to install webpack in project repo.
+3. Install other dependencies if needed.  
+   ([Assets](https://webpack.js.org/guides/asset-management/))  
+   ([Output](https://webpack.js.org/guides/output-management/))  
+   ([Development](https://webpack.js.org/guides/development/))  
+   ([Code-splitting, Lazy-loading, and Tree-shaking](https://webpack.js.org/guides//))
 
 ## Setting up prettier
 
-1. `npm install --save-dev --save-exact prettier` in the repo you’re working on so on a per project basis
-2. `echo {}> .prettierrc.json` to create a file that is needed to recognise this repo uses prettier
-3. `touch .prettierignore` and put files to be ignored in it based on your ESLintignore and/or gitignore file (gitignore would be recommended to copy over)
+1. `npm install --save-dev --save-exact prettier` in the repo you’re working on so on a per project basis.
 
-### Note for Step 3:
+2. Check .prettierignore file is properly set up according below.
 
 **.prettierignore file set up:**
 
@@ -25,25 +32,25 @@ CVS
 Thumbs.db
 ```
 
-4. install Prettier extension in VSCode to be able to format using a shortcut or set it up to run on save etc.
+3. Install Prettier extension in VSCode to be able to format using a shortcut or set it up to run on save etc.
 
-_For more info on setting up a gitignore file:_
-https://www.freecodecamp.org/news/gitignore-file-how-to-ignore-files-and-folders-in-git/
+_Click [here](https://www.freecodecamp.org/news/gitignore-file-how-to-ignore-files-and-folders-in-git/) for more info on setting up a gitignore file_
 
 ## Setting up ESLint
 
-5. `npm init --yes` in the repo/project you’ll be working on. This is to get a package.json file in there if it's not there yet.
+4. `npm init --yes` in the repo/project you’ll be working on. This is to get a package.json file in there if it's not there yet.
 
-6./7. `npm init @eslint/config` to hit two birds with one stone (intitialize and creating the config file)
+5. `npm init @eslint/config` to hit two birds with one stone (intitialize and creating the config file).
 
-8. Configure the resulting eslintrc.json file first by the prompts and/or review https://www.digitalocean.com/community/tutorials/linting-and-formatting-with-eslint-in-vs-code for prompt decisions and later adjusting of config. Copy from template repo.
+6. Configure the resulting eslintrc.json file first by the prompts and review [link](https://www.digitalocean.com/community/tutorials/linting-and-formatting-with-eslint-in-vs-code) for prompt decisions and later adjustment of config. Copy from [template](https://github.com/gabe-san/project-template) if needed.
 
-9. Install the ESLint VSCode extension for visual clues during programming and maybe even configure it to do it's magic on each save automatically, also explained on the above DigitalOcean lesson
+7. Ensure ESLint VSCode extension is installed and configured correctly according to above link.
 
 ## Setting up eslint-config-prettier
 
-10. npm install --save-dev eslint-config-prettier in the same repo to make ESLint and Prettier work nicely together without conflict
-11. add "prettier" to the "extends" array in your .eslintrc.\* file at the end of the file
+8. `npm install --save-dev eslint-config-prettier` in the root project repository to make ESLint and Prettier work together without conflict.
+
+9. Check that "prettier" is added to "extends" array in your .eslintrc.json file.
 
 ```
     example:
@@ -54,9 +61,12 @@ https://www.freecodecamp.org/news/gitignore-file-how-to-ignore-files-and-folders
 ],
 ```
 
-12. npx eslint-config-prettier path/to/main.js to see if there are conflicts
+10. `npx eslint-config-prettier path/to/main.js` (pwd on root directory) to see if there are conflicts
 
-Now to manually use prettier for formatting you can use the shortcut shift+alt+f or use the command npx prettier --write <filename>
-To see all the errors and warnings for ESLint you can use the command npx eslint <filename> but they're also shown in the VSCode Problems section
+To manually use Prettier for formatting, you can use the shortcut SHIFT+ALT+F or use the command `npx prettier --write
+<filename>` .  
+To view all the errors and warnings for ESLint you can use the command `npx eslint <filename>` but they're also shown in the VSCode Problems section.
 
-13. set up ESLint to automatically fix syntax and formatting issues upon save by following Step 4 and 5 of this article: https://www.digitalocean.com/community/tutorials/linting-and-formatting-with-eslint-in-vs-code
+11. Set up ESLint to automatically fix syntax and formatting issues upon save by following Step 4 and 5 of this [article](https://www.digitalocean.com/community/tutorials/linting-and-formatting-with-eslint-in-vs-code)
+
+12. Finally, check [GitHub](https://github.com/gabe-san/project-template) repository if any commits have not been updated.
